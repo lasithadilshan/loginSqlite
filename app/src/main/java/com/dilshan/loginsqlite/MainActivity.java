@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText username, password, rePassword;
+    TextView forgot;
     Button signUp, signIn;
     DBHelper DB;
 
@@ -23,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         rePassword = findViewById(R.id.rePassword);
-        signUp = findViewById(R.id.btnSignIn);
-        signIn = findViewById(R.id.btnSignUp);
+        signUp = findViewById(R.id.btnSignUp);
+        signIn = findViewById(R.id.btnSignIn);
         DB = new DBHelper(this);
+        forgot = findViewById(R.id.btnForget);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +69,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),PasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

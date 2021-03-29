@@ -41,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textSize="20dp"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/rePassword"/>
 
@@ -48,9 +49,21 @@
         android:id="@+id/btnSignIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:text="Existing user! Go to Sign in page"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/btnSignUp"/>
+
+    <TextView
+        android:id="@+id/btnForget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/btnSignIn"
+        android:text="Forgot Password"
+        />
 
 
 </RelativeLayout>
